@@ -1,0 +1,19 @@
+.total{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.left,.right{
+    width:45vw;
+}
+@media (max-width: 600px) {
+    .total{
+        display:flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .left,
+    .right{
+        width:90vw !important;
+    }
+}

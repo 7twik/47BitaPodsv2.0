@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&family=Mulish&family=Yeon+Sung&family=Sevillana&family=Moon+Dance&family=McLaren&family=Montserrat&family=Roboto&family=Oswald:wght@300&display=swap');
+.work-tab{
+    width: 80vw;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    padding-top: 5vh;
+    border: none;
+    /* background-color: #ffffff;
+    background-image: url("https://www.transparenttextures.com/patterns/cubes.png"); */
+}
+.work-list{
+    width:80vw;
+    list-style: none;
+    display:flex;
+    justify-content: space-around;
+    padding-bottom: 5vh;
+}
+.work-title{
+    cursor:pointer;
+    border:none !important;
+    font-family: Roboto;
+    font-size: 4vh;
+    color:rgb(182, 40, 40);
+    text-shadow: 0.4px 0.4px rgb(255, 0, 0);
+    text-decoration: none;
+}
+.work-title:hover{
+    color:#ff0202;
+}
+.work-list ul h1.active{
+    color:blue;
+}
+.work-titlee{
+    cursor:pointer;
+    font-family: Roboto;
+    font-size: 4vh;
+    text-shadow: 0.8px 0.8px maroon;
+    text-decoration: none;
+    color:#950101 !important;
+    text-decoration: underline;
+    text-decoration-line: underline 20px;
+    text-decoration-color: #c55b1d;
+    text-underline-offset: 1.5vh;
+}
+:focus-visible{
+    outline: 0px;
+}
+.h2{
+    cursor:pointer;
+    font-family: Roboto;
+    font-size: 5.5vh;
+    text-shadow: 0.8px 0.8px maroon;
+    text-decoration: none;
+    color:#950101 !important;
+    text-decoration: underline;
+    text-decoration-color: #c55b1d;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    text-decoration-color: #c55b1d;
+    text-underline-offset: 1.5vh;
+}
+.work-left,
+.work-right{
+    width:40vw;
+}
+.work-left{
+    height:auto;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.work-content{
+    width: 80vw;
+    display: flex;
+}
+.work-img{
+    width: 40vw;
+    padding:5vw;
+}
+.work-rightt{
+    font-size: 2.5vh;
+    color:#ffffff;
+    font-family: Mulish;
+    font-weight: 550;
+    text-shadow: 0.4px 0.4px maroon;
+}
+.work-point{
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+}
+@media (max-width: 768px) {
+    .work-content{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .work-img{
+        width: 80vw;
+    }
+    .work-left,
+    .work-right{
+        width:80vw;
+    }
+    .work-title,
+    .work-titlee{
+        font-size: 3vh;
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
+}
+

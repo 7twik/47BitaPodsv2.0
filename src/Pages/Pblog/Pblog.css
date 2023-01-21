@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Moon+Dance&family=Poppins:wght@400;500;600;700&display=swap');
+.outerBlog1{
+    width:100vw;
+    padding: 5vh 7vw 5vh 7vw;
+    font-family: Poppins;
+    
+    background-color: #ffffff;
+    background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+}
+.innerBlog1{
+    width:84vw;
+    padding-left: 12vw;
+    padding-right: 12vw;
+}
+.blog-date1{
+    font-size: 3vh;
+    padding-bottom: 4vh;
+}
+.blog-head1{
+    font-size: 5vh;
+    padding-bottom: 4vh;
+    font-weight: 600;
+}
+.blog-author1{
+    font-size: 3.4vh;
+    padding-bottom: 6vh;
+    display: flex;
+}
+.author{
+    color:red;
+    font-family: Moon Dance;
+    font-weight: 600;
+}
+.blog-imgo{
+    width: 84vw;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 5vh;
+}
+.blog-img1{
+    height: 70vh;
+}
+.blog-body1{
+    font-size: 3vh;
+    font-weight: 100;
+    width:84vw;
+    padding-left: 12vw;
+    padding-right: 12vw;
+}
+@media (max-width: 900px) {
+    .blog-body1{
+        padding-left: 6vw !important;
+        padding-right: 6vw !important;
+        font-size: 2.5vh !important;
+    }
+}
+

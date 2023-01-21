@@ -1,0 +1,68 @@
+.Ame-total{
+    width: 100vw;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    background-color: #ffffff;
+    display: flex;
+    background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+}
+.Ame-left{
+    width:45vw;
+    background-color: rgb(247, 14, 14);
+    display:flex;
+    flex-wrap: wrap;
+    /* border-radius: 20%;
+    box-shadow: 3px 4px 36px -6px rgba(0,0,0,0.8); */
+    backdrop-filter: blur(10px);
+}
+.Ame-right{
+    width: 45vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Ame-int{
+    width:15vw;
+    color:aliceblue;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3vh 1.5vw 3vh 1.5vw;
+    height: fit-content;
+    font-size: 3vw;
+}
+.Ame-text{
+    font-size: 3vh;
+}
+.Ame-img{
+    width: 45vw;
+    height: 95vh;
+}
+@media (max-width: 800px) {
+    .Ame-total{
+        display: flex;
+        flex-direction: column;
+    }
+    .Ame-left,
+    .Ame-right{
+        width: 90vw;
+    }
+    .Ame-int{
+        width: 30vw;
+    }
+    .Ame-img{
+        padding-top: 10vh;
+        width: 90vw;
+        height: auto;
+    }
+    .Ame-text{
+        font-size: 1.3vh !important;
+    }
+}
+@media (max-height: 600px) {
+    
+}

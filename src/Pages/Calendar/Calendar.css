@@ -1,0 +1,36 @@
+input.inputBox {
+    font-size: 18px;
+    padding: 0px 8px 0px 8px;
+    border-radius: 3px;
+    border: 1px solid #666;
+  }
+  
+  .calendarWrap {
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .calendarElement {
+    position: absolute;
+    left: -150%;
+    transform: translateX(-50%);
+    transform: translateY(-50%);
+    top: 40px;
+    border: 1px solid #ccc;
+    z-index: 3000;
+  }
+  
+@media (max-height: 700px){
+    .calendarElement{
+        top:-20vw !important;
+    }
+
+} 
+@media (max-width: 700px){
+    .calendarElement
+    {
+        left: -100% !important;
+    }
+}
+  

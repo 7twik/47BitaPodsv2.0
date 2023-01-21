@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+.carou-total{
+    padding-left: 8vw;
+    padding-right: 8vw;
+    width:100vw;
+    height: 90vh;
+    display: flex;
+}
+.carou-left{
+    width:42vw;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-right: 1vw;
+}
+.carou-right{
+    padding-left: 1vw;
+    width:42vw;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.carou-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:42vw
+}
+.Carou-tot{
+    display: flex;
+}
+
+.carou-f22{
+    
+    font-family: Poppins;
+    text-shadow: 0.7px 0.7px #ff7700;
+    color:#641919;
+    display: flex;
+    justify-content: center;
+    font-size: 5vh;
+    width: 52vw;
+}
+@media (max-width: 900px) and (min-height:500px) {
+    .Carou-tot{
+        height: 100vh !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between !important;
+        align-items: center;
+    }
+    
+    .carou-img{
+        width:84vw;
+    }
+    .carou-left,
+    .carou-right{
+        width: 84vw;
+        height: 62vh;
+    }
+    .carou-total{
+        height: 100vh !important;
+    }
+}

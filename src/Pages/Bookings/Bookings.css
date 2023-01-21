@@ -1,0 +1,12 @@
+.Book-total{
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center !important;
+    padding-bottom: 5vh;
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+.Book-button{
+    width:15vw;
+}

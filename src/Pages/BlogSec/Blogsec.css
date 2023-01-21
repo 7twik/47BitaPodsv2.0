@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&family=Sevillana&family=Mulish&family=Moon+Dance&family=McLaren&family=Montserrat&family=Oswald:wght@300&display=swap');
+.blogSec-left{
+    width: 30vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.blogsec-img{
+    height:40vh;
+    padding-left: 5vw;
+}
+.blogSec-right{
+    width: 60vw;
+    padding-left: 2vw;
+    padding-right: 4vw;
+}
+.blogSec-total{
+    width:90vw;
+    display: flex;
+    padding-top: 3.5vh;
+    padding-bottom: 3.5vh;
+    /* */
+
+    flex-wrap:wrap;
+    overflow-wrap:inherit;
+    /* background-color: white; */
+    background-color: rgba(255, 4, 4, 0.456); 
+    /* opacity:0.5; */
+    box-shadow: 3px 4px 36px -6px rgba(0,0,0,0.8);
+    border-radius: 50px;
+    text-shadow: 0.6px 0.6px #7c1713 ;
+    font-weight: 400;
+}
+.blogSec-date{
+    font-size: 1.5vh;
+    font-family: Poppins;
+    color:black;
+}
+.blogSec-author{
+    font-size: 1.7vh;
+    font-family: Poppins;
+    color:black;
+}
+.blogSec-body{
+    font-size: 2vh;
+    font-family: Mulish;
+    color:rgb(7, 7, 7);
+}
+.blogSec-head{
+    font-size: 3vh;
+    font-family: Oswald;
+    color:rgb(130, 80, 45);
+    cursor: pointer;
+}
+.blogSec-head:hover{
+    color:#ff0000;
+}
+.spaceBB{
+    height:4vh;
+}
+@media (max-width: 800px) {
+    .blogSec-total{
+        display: flex;
+        flex-direction: column;
+    }
+    .blogSec-left,
+    .blogSec-right{
+        width:90vw;
+    }
+    .blogsec-img{
+        padding-bottom: 8vh;
+    }
+    .blogSec-right{
+        padding: 5vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .blogSec-head{
+        text-decoration: underline;
+        text-decoration-color: coral;
+    }
+    .spaceBB{
+        height: 2vh !important;
+    }
+}

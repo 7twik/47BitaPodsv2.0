@@ -1,0 +1,40 @@
+const dates =['2023-01-12T18:30:00.000Z', '2023-01-13T18:30:00.000Z', '2023-01-14T18:30:00.000Z', '2023-01-15T18:30:00.000Z', '2023-01-16T18:30:00.000Z','2023-01-10T16:09:20.590Z', '2023-01-11T18:30:00.000Z', '2023-01-17T18:30:00.000Z', '2023-01-18T18:30:00.000Z', '2023-01-19T18:30:00.000Z', '2023-01-11T18:30:00.000Z', '2023-01-12T18:30:00.000Z', '2023-01-13T18:30:00.000Z', '2023-01-14T18:30:00.000Z', '2023-01-15T18:30:00.000Z', '2023-01-16T18:30:00.000Z', '2023-01-17T18:30:00.000Z', '2023-01-18T18:30:00.000Z', '2023-01-19T18:30:00.000Z', '2023-01-11T18:30:00.000Z', '2023-01-12T18:30:00.000Z', '2023-01-13T18:30:00.000Z', '2023-01-14T18:30:00.000Z', '2023-01-15T18:30:00.000Z', '2023-01-16T18:30:00.000Z', '2023-01-17T18:30:00.000Z', '2023-01-18T18:30:00.000Z', '2023-01-19T18:30:00.000Z', '2023-01-11T18:30:00.000Z', '2023-01-12T18:30:00.000Z', '2023-01-13T18:30:00.000Z', '2023-01-14T18:30:00.000Z', '2023-01-15T18:30:00.000Z', '2023-01-16T18:30:00.000Z', '2023-01-17T18:30:00.000Z', '2023-01-18T18:30:00.000Z', '2023-01-19T18:30:00.000Z'];
+const d2=dates.sort();
+console.log(d2.l);
+
+const startDate = new Date("2023-01-01");
+const endDate = new Date("2023-01-31");
+function getDateRanges(dates, startDate, endDate) {
+    // Sort the dates in ascending order
+    dates.sort((a, b) => a - b);
+
+    // Initialize an array to store the date ranges
+    const dateRanges = [];
+
+    // Initialize the start and end of the current date range
+    let rangeStart = startDate;
+    let rangeEnd;
+
+    // Iterate through the dates
+    for (let i = 0; i < dates.length; i++) {
+        // If the current date is after the start date, add the date range to the dateRanges array
+        if (dates[i] > startDate) {
+            rangeEnd = new Date(dates[i])
+            rangeEnd.setDate(rangeEnd.getDate()-1)
+            dateRanges.push({start: rangeStart, end: rangeEnd});
+        }
+
+        // Update the start of the current date range to be the day after the current date
+        rangeStart = new Date(dates[i]);
+        rangeStart.setDate(rangeStart.getDate() + 1);
+
+        // If it's the last date check endDate is after it 
+        if(i === dates.length -1 && endDate > rangeStart) {
+            dateRanges.push({start: rangeStart, end: endDate});
+        }
+    }
+    // Return the date ranges
+    return dateRanges;
+}
+const dateRanges = getDateRanges(dates, startDate, endDate);
+console.log(dateRanges);

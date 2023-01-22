@@ -121,7 +121,7 @@ function HomePage() {
               </div>
           </div>
         </div> */}
-        <Modal closeOnOverlayClick={false} size={"xl"} isCentered isOpen={isOpen} onClose={onClose}>
+        {/* <Modal closeOnOverlayClick={false} size={"xl"} isCentered isOpen={isOpen} onClose={onClose}>
         <ModalOverlay
           bg='none'
           backdropFilter='auto'
@@ -148,7 +148,7 @@ function HomePage() {
           <ModalFooter className="modal-bg">
              </ModalFooter>
         </ModalContent>
-      </Modal>
+      </Modal> */}
       {/* <div className={app}>
               <div className="main">
                         <div className="popup">

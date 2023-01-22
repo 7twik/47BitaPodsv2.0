@@ -141,3 +141,14 @@ span{
         padding-left: 0vw;
     }
 }
+.react-responsive-modal-modal {
+  
+    background-color: #ffffff !important;
+    background-image: url(https://www.transparenttextures.com/patterns/skulls.png) !important;
+
+}
+.react-responsive-modal-overlay {
+    background: rgb(0 0 0 / 87%) !important;
+    backdrop-filter: 'auto';
+    background-blend-mode: luminosity;
+}

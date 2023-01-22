@@ -40,12 +40,17 @@
     background-color:black;
     color:white;
 }
+.moddd{
+    min-width: 40vw;
+}
 .home-pad{
     padding-top:3vh;
 }
 .mod-top{
     font-family: Poppins;
-    font-size:large;
+    font-size:23px;
+    font-weight: 600;
+    padding-top: 5vh;
 }
   .popp{
     top:5%;

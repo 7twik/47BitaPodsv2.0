@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&family=Sevillana&family=Moon+Dance&family=McLaren&family=Montserrat&family=Oswald:wght@300&display=swap');
-.totalf{
+
+.totalf {
     padding-left: 3.5vw;
     padding-right: 3.5vw;
     display: flex;
@@ -8,60 +9,89 @@
     padding-top: 10vh;
     z-index: -1;
     /* background-color:rgba(104, 32, 32, 0.423); */
-    background-color:rgba(197, 197, 197, 0.77);
+    background-color: rgba(197, 197, 197, 0.77);
     /* rgba(197, 197, 197, 0.767)  */
     /* background-color: #e2e8f0; */
     /*background-image: url("https://www.transparenttextures.com/patterns/debut-light.png");*/
-    
-}.footB{
+
+}
+
+.footB {
     display: flex;
     justify-content: center;
-    height:20vh;
+    height: 20vh;
     padding-top: 10vh;
     padding-bottom: 10vh;
-    color:rgb(15, 15, 15);
+    color: rgb(15, 15, 15);
 }
-.footT{
+@media (max-width: 700px){
+    .footB{
+            flex-direction: column;
+            align-items: center;
+            padding-left: 10vw;
+            padding-right: 10vw;
+    }
+    /* .footB-b{
+        min-width: 100vw !important;
+        padding-left:5vw ;
+        padding-right:5vw ;
+    } */
+    .divslash{
+        display: none;
+    }
+
+}
+.footB-b{
+    display: flex;
+    /* justify-content: center; */
+}
+.footT {
     display: flex;
 }
-.leftf{
-    width:30vw;
-    height:50vh;
+
+.leftf {
+    width: 30vw;
+    height: 50vh;
 }
-.logF{
+
+.logF {
     height: 15vh;
 }
+
 .middle,
 .rightf,
-.rightr{
+.rightr {
     width: 21vw;
-    height:40vh;
+    height: 40vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    color:#030303;
+    color: #030303;
 }
 
-.leftf{
+.leftf {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    color:rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
     text-shadow: 1px 1px red;
 }
-.logof{
+
+.logof {
     font-size: 6vw;
     font-family: Moon Dance;
 }
-.leftf-b{
+
+.leftf-b {
     width: 10vw;
     display: flex;
     justify-content: space-around;
 }
-.rightr ul{
+
+.rightr ul {
     list-style-type: none;
-    color:#080808;
+    color: #080808;
     padding-left: 2.5vh;
     padding-right: 2.5vh;
     padding-top: 4vh;
@@ -70,9 +100,9 @@
     justify-content: space-between;
 }
 
-.middle ul{
+.middle ul {
     list-style-type: none;
-    color:#0a0a0a;
+    color: #0a0a0a;
     padding-left: 2.5vh;
     padding-right: 2.5vh;
     padding-top: 4vh;
@@ -80,9 +110,10 @@
     flex-direction: column;
     justify-content: space-between;
 }
-.rightf ul{
+
+.rightf ul {
     list-style-type: none;
-    color:#1b1a1a;
+    color: #1b1a1a;
     padding-left: 2.5vh;
     padding-right: 2.5vh;
     padding-top: 4vh;
@@ -90,39 +121,46 @@
     flex-direction: column;
     justify-content: space-between;
 }
-li{
+
+li {
     padding-top: 1vh;
 }
-span{
+
+span {
     font-size: larger;
-    font-family:  Poppins;
+    font-family: Poppins;
     font-weight: 500;
-    color:rgb(219, 19, 19);
-    text-decoration: underline;    
+    color: rgb(219, 19, 19);
+    text-decoration: underline;
     padding-bottom: 5vh;
 }
-.ico{
-    font-size:2vw;
+
+.ico {
+    font-size: 2vw;
 }
-.ico:hover{
-    color:rgb(211, 29, 29);
+
+.ico:hover {
+    color: rgb(211, 29, 29);
 }
+
 @media (max-width: 900px) {
-    .footT{
+    .footT {
         display: flex;
         flex-direction: column;
         height: max-content;
 
     }
-    .ico{
+
+    .ico {
         font-size: 5vh;
         padding-left: 2vh;
         padding-right: 2vh;
     }
+
     .leftf,
     .middle,
     .rightf,
-    .rightr{
+    .rightr {
         padding-top: 5vh;
         width: 100vw;
         display: flex;
@@ -131,24 +169,38 @@ span{
         text-align: center;
         padding-bottom: 5vh;
     }
-    a:hover{
-        color:red !important;
+
+    a:hover {
+        color: red !important;
     }
-    .footB{
+
+    .footB {
         height: fit-content !important;
     }
-    .totalf{
+
+    .totalf {
         padding-left: 0vw;
     }
 }
+
 .react-responsive-modal-modal {
-  
-    background-color: #ffffff !important;
-    background-image: url(https://www.transparenttextures.com/patterns/skulls.png) !important;
+    background-color: #424242;
+    background-image: url("https://www.transparenttextures.com/patterns/brick-wall-dark.png") !important;
+    /* background-color: #b5b5b5 !important; */
+    /* background-color: #424242 !important; */
+    /* background-image: url(https://www.transparenttextures.com/patterns/skulls.png) !important; */
+    /* background-image: url("https://images.unsplash.com/photo-1533090161767-e6ffed986c88?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8b2ZmaWNlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60") !important;
+    background-size: contain; */
 
 }
+
 .react-responsive-modal-overlay {
     background: rgb(0 0 0 / 87%) !important;
     backdrop-filter: 'auto';
     background-blend-mode: luminosity;
+}
+
+.foot-loc:hover {
+    color: maroon;
+    text-decoration: underline;
 }

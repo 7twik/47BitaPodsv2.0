@@ -9,6 +9,7 @@ import AddBlog from './Pages/AddBlog/AddBlog';
 import Contact from './Pages/Contact/Contact';
 import Member from './Pages/Member/Member';
 import Call from './Pages/Call/Call';
+import Privacy from './Pages/privacyPolicy/Privacy';
 function App() {
   return (
     <div className="App">
@@ -21,6 +22,7 @@ function App() {
             <Route path="/AddBlog" element={<AddBlog />}/>
             <Route path="/Admin" element={<Member />}/>
             <Route path="/contact" element={<Contact />}/>
+            <Route path='/t&c' element={<Privacy />} />
         </Routes>
       </header>
     </div>

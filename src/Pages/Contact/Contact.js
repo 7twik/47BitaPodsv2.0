@@ -26,7 +26,7 @@ const Contact = () => {
             </div>
         </div>
         <div className="Contact-gap"></div>
-        <div className='Footer' data-aos="zoom-in-up">
+        <div className='Footerz' data-aos="zoom-in-up">
             <Footer />
         </div>
     </div>

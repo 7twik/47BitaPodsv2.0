@@ -8,10 +8,12 @@ import AddBlog from './Pages/AddBlog/AddBlog';
 //import Pblog from './Pages/Pblog/Pblog';
 import Contact from './Pages/Contact/Contact';
 import Member from './Pages/Member/Member';
+import Call from './Pages/Call/Call';
 function App() {
   return (
     <div className="App">
       <header className="App-header">
+      <Call />
         <Routes>
             <Route path="/" element={<HomePage />}/>
             <Route path="/workplaces" element={<WorkPlaces />}/>

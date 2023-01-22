@@ -7,27 +7,27 @@ const Privacy = () => {
     <>
       <Navbar />
       <div className="privcon">
-      <h1>Terms & Conditions</h1>
+      <h1 className="privh1">Terms & Conditions</h1>
         <p>
           This page informs you of our policies regarding the collection, use,
           and disclosure of personal data when you use our Service and the
           choices you have associated with that data. Our Privacy Policy for
-          ZIOKS is created with the help of the Free Privacy Policy website.
+          47BitaPods is created with the help of the Free Privacy Policy website.
         </p>
         <p>
           We use your data to provide and improve the Service. By using the
           Service, you agree to the collection and use of information in
           accordance with this policy. Unless otherwise defined in this Privacy
           Policy, terms used in this Privacy Policy have the same meanings as in
-          our Terms and Conditions, accessible from www.zioks.com
+          our Terms and Conditions, accessible from www.47BitaPods.com
         </p>
-        <h2> Information Collection And Use</h2>
+        <h2 className="privh2"> Information Collection And Use</h2>
         <p>
           We collect several different types of information for various purposes
           to provide and improve our Service to you.
         </p>
-        <h3>Types of Data Collected</h3>
-        <h4>Personal Data</h4>
+        <h3 className="privh3">Types of Data Collected:</h3>
+        <h4 className="privh4">Personal Data</h4>
         <p>
           {" "}
           While using our Service, we may ask you to provide us with certain
@@ -35,14 +35,14 @@ const Privacy = () => {
           identify you ("Personal Data"). Personally identifiable information
           may include, but is not limited to:
         </p>
-        <ul>
+        <ul className="list">
           <li>Email address</li>
           <li>First name and last name</li>
           <li>Phone number</li>
           <li>Address, State, Province, ZIP/Postal code, City</li>
           <li>Cookies and Usage Data</li>
         </ul>
-        <h4>Usage Data</h4>
+        <h4 className="privh4">Usage Data</h4>
         <p>
           We may also collect information how the Service is accessed and used
           ("Usage Data"). This Usage Data may include information such as your
@@ -51,8 +51,8 @@ const Privacy = () => {
           date of your visit, the time spent on those pages, unique device
           identifiers and other diagnostic data.
         </p>
-        <h4>Tracking & Cookies Data</h4>
-        <p>
+        <h4 className="privh4">Tracking & Cookies Data</h4>
+        <p>  
           {" "}
           We use cookies and similar tracking technologies to track the activity
           on our Service and hold certain information. Cookies are files with
@@ -66,12 +66,12 @@ const Privacy = () => {
           Examples of Cookies we use: Session Cookies. We use Session Cookies to
           operate our Service. Preference Cookies. We use Preference Cookies to
           remember your preferences and various settings. Security Cookies. We
-          use Security Cookies for security purposes
+          use Security Cookies for security purposes.
         </p>
-        .<h4>Use of Data</h4>
+        <h4 className="privh4">Use of Data</h4>
         <p>
           {" "}
-          ZIOKS uses the collected data for various purposes: To provide and
+          47BitaPods uses the collected data for various purposes: To provide and
           maintain the Service To notify you about changes to our Service To
           allow you to participate in interactive features of our Service when
           you choose to do so To provide customer care and support To provide
@@ -85,15 +85,15 @@ const Privacy = () => {
           provide information to us, please note that we transfer the data,
           including Personal Data, to India and process it there. Your consent
           to this Privacy Policy followed by your submission of such information
-          represents your agreement to that transfer. ZIOKS will take all steps
+          represents your agreement to that transfer. 47BitaPods will take all steps
           reasonably necessary to ensure that your data is treated securely and
           in accordance with this Privacy Policy and no transfer of your
           Personal Data will take place to an organization or a country unless
           there are adequate controls in place including the security of your
           data and other personal information. Disclosure Of Data Legal
-          Requirements ZIOKS may disclose your Personal Data in the good faith
+          Requirements 47BitaPods may disclose your Personal Data in the good faith
           belief that such action is necessary to: To comply with a legal
-          obligation To protect and defend the rights or property of ZIOKS To
+          obligation To protect and defend the rights or property of 47BitaPods To
           prevent or investigate possible wrongdoing in connection with the
           Service To protect the personal safety of users of the Service or the
           public To protect against legal liability Security Of Data The
@@ -102,7 +102,7 @@ const Privacy = () => {
           100% secure. While we strive to use commercially acceptable means to
           protect your Personal Data, we cannot guarantee its absolute security.
         </p>
-        <h3>Service Providers</h3>
+        <h3 className="privh3">Service Providers</h3>
         <p>
           We may employ third party companies and individuals to facilitate our
           Service ("Service Providers"), to provide the Service on our behalf,
@@ -111,7 +111,7 @@ const Privacy = () => {
           Data only to perform these tasks on our behalf and are obligated not
           to disclose or use it for any other purpose.
         </p>{" "}
-        <h3>Analytics</h3>
+        <h3 className="privh3">Analytics</h3>
         <p>
           We may use third-party Service Providers to monitor and analyze the
           use of our Service. Google Analytics Google Analytics is a web
@@ -128,7 +128,7 @@ const Privacy = () => {
           Google Privacy & Terms web page:
           https://policies.google.com/privacy?hl=en{" "}
         </p>
-        <h3>Links To Other Sites</h3>
+        <h3 className="privh3">Links To Other Sites</h3>
         <p>
           Our Service may contain links to other sites that are not operated by
           us. If you click on a third party link, you will be directed to that
@@ -137,7 +137,7 @@ const Privacy = () => {
           responsibility for the content, privacy policies or practices of any
           third party sites or services.
         </p>
-        <h3>Children's Privacy</h3>{" "}
+        <h3 className="privh3">Children's Privacy</h3>{" "}
         <p>
           Our Service does not address anyone under the age of 18 ("Children").
           We do not knowingly collect personally identifiable information from
@@ -147,7 +147,7 @@ const Privacy = () => {
           Data from children without verification of parental consent, we take
           steps to remove that information from our servers.
         </p>
-        <h3> Changes To This Privacy Policy</h3>
+        <h3 className="privh3"> Changes To This Privacy Policy</h3>
         <p>
           We may update our Privacy Policy from time to time. We will notify you
           of any changes by posting the new Privacy Policy on this page. We will
@@ -156,12 +156,15 @@ const Privacy = () => {
           the top of this Privacy Policy.cy are effective when they are posted
           on this page.
         </p>
-        <h4> Contact Us</h4>
+        <h4 className="privh4"> Contact Us</h4>
         <p>
           If you have any questions about this Privacy Policy, please contact
-          us: By email: support@zioks.com By visiting this page on our website:
-          www.zioks.com/contact
+          us: By email: support@47BitaPods.com By visiting this page on our website:
+          www.47BitaPods.com/contact
         </p>
+      </div>
+      <div className="gapz">
+        
       </div>
       <Footer />
     </>

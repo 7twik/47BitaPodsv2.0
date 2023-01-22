@@ -1,7 +1,46 @@
 .privcon{
-    padding: 10px;
-    
+    padding-left: 10vw;
+    padding-right: 10vw;
+    color: rgb(69, 67, 67);
+    font-size: 18px;
 }
-h1{
-    font-size: 40px;
+.privh1{
+    font-size: 2rem;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: rgb(237, 37, 37);
+    display:flex;
+    position: sticky;
+    justify-content: center;
+    align-items: center;
+}
+.privcon p{
+
+}
+.list{
+    padding-left: 15px;
+}
+.privh2{
+    font-size: 1.45rem;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: 500;
+    color: black;
+}
+.privh3{
+    font-size: 1.4rem;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: 300;
+    color: black;
+}
+.privh4{
+    font-size: 1.2rem;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: 250;
+    color: black;
+}
+.gapz{
+    min-height: 10vh;
 }

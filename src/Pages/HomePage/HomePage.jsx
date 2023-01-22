@@ -12,40 +12,42 @@ import React from "react";
 import Amenities from '../Amenities/Amenities';
 import CarouselD from '../Carousel/CarouselD';
 import emailjs from "emailjs-com"
+
+import 'react-responsive-modal/styles.css';
+import { Modal } from 'react-responsive-modal';
 import { Button } from '@chakra-ui/react';
 import {
-  Modal,
-  ModalOverlay,
-  ModalContent,
-  ModalHeader,
-  ModalFooter,
-  ModalBody,
+  // ModalContent,
+  // ModalHeader,
+  // ModalFooter,
+  // ModalCloseButton,
+  // ModalBody,
   FormLabel,
   Input
 } from '@chakra-ui/react'
-import { useDisclosure } from '@chakra-ui/react'
+//import { useDisclosure } from '@chakra-ui/react'
 function HomePage() {
 
   const [input,setInput]=React.useState(true);
   React.useEffect(() => {
     AOS.init();
   }, []);
-  const [fdone,setFdone]=React.useState(false);
+  //const [fdone,setFdone]=React.useState(false);
   const [form, setForm] = React.useState({
 		Name: "",
 		Email: "",
     Number: ""
 	  });
-    React.useEffect(()=>{
-      if ((form.Name!=="")&&(form.Email!==""))
-      {
-        setFdone(true);
-      }
-      else
-      {
-        setFdone(false);
-      }
-    })
+    // React.useEffect(()=>{
+    //   if ((form.Name!=="")&&(form.Email!==""))
+    //   {
+    //     setFdone(true);
+    //   }
+    //   else
+    //   {
+    //     setFdone(false);
+    //   }
+    // })
     
     function handleChangeForm(event) {
       const { name, value } = event.target;
@@ -58,110 +60,69 @@ function HomePage() {
       });
       };
 
-  const { isOpen, onOpen, onClose } = useDisclosure();
-  const [app,setApp]=React.useState("toastee")
+ // const { isOpen, onOpen, onClose } = useDisclosure();
+  //const [app,setApp]=React.useState("toastee")
   //const myTimeout = setTimeout(myGreeting, 5000);
+  function myGreeting()
+  {
+    onOpenModal();
+   // setApp("toaste");
+  }
   React.useEffect(()=>{
     setTimeout(myGreeting, 5000);
   },[]);
-  function myGreeting()
-  {
-    onOpen();
-    setApp("toaste");
-  }
-  function close()
-  {
-    setApp("toastee")
+  const [open, setOpen] = React.useState(false);
+
+  const onOpenModal = () => setOpen(true);
+  const onCloseModal = () => setOpen(false);
+
+ 
+  // function close()
+  // {
+  //   setApp("toastee")
+  // }
+  function containsOnlyNumbers(str) {
+    return /^[0-9]+$/.test(str);
   }
   function submitNoteForm(event)
   {   
       console.log(form.Name+",,,"+form.Email);
       event.preventDefault();
-      if (form.Name==="" || form.Email==="")
+      if (form.Name==="" || !(((form.Email).includes('@',0))&&((form.Email).includes(".com",0))) || !containsOnlyNumbers(form.Number))
       {
         setInput(false);
       }
       else{
         console.log(event.target);
         emailjs.sendForm("service_adr03va","template_2r0es66",event.target,"PvTh2g-GgAfPvNvK_").then(res=>{console.log(res);}).catch(err=> console.log(err));   
-        onClose();
+        onCloseModal();
       }
   }
 
   return (
     <div className="App">
       <span className='sp'></span>
-      {/* <div className={app}>
-      <div className='popp'>
-            <div className='pop-in'>
-              <Button className='pop-but' colorScheme='red' onClick={close}>Close</Button>
-              <div className='pop-heading'>
-                Contact us to get yourself a workplace today 
-              </div>
-              <div className='pop-2'>
-                <Form />
-              </div>
-          </div>
-        </div>
-      </div> */}
-      {/* <div className={app}>
-        <div className='popp'>
-        <div className='cross-button' onClick={close}><RxCross1 /></div>
-              <div className='pop-in'>
-                
-                <div className='pop-body'>
-                  <div className='pop-heading'>
-                    Want to book a workplace today?
-                  </div>
-                  <div className='pop-heading'>
-                    Contact us right now !
-                  </div>
-                    <Forme />
-                 </div> 
-              </div>
-          </div>
-        </div> */}
-        {/* <Modal closeOnOverlayClick={false} size={"xl"} isCentered isOpen={isOpen} onClose={onClose}>
-        <ModalOverlay
-          bg='none'
-          backdropFilter='auto'
-          backdropInvert='80%'
-          backdropBlur='2px'
-        />
-        <ModalContent>
-          <ModalHeader className="modal-bg mod-top">Contact us to get yourself a workplace today </ModalHeader>       
-          <ModalBody className="modal-bg">
-          <form onSubmit={submitNoteForm}>
+      
+  
+  <Modal className="mode" open={open} onClose={onCloseModal} closeOnOverlayClick={false} center={true}>
+    <div className='moddd'>
+  <div className="mod-top">Contact us to get yourself a workplace today </div>       
+           <form onSubmit={submitNoteForm}>
               {(input===true)?<></> : <div className='modal-bg'>* Fill Name and Email fields so that we can reach you</div>}
               <FormLabel className="home-pad" name="Name">Name</FormLabel>
-              <Input placeholder='First name'  name="Name"  onChange={handleChangeForm} />
+              <Input placeholder='Name'  _placeholder={{ opacity: 1, color: 'gray.600' }} name="Name"  onChange={handleChangeForm} />
               <div className="gap"></div>
               <FormLabel className="home-pad" name="Email">Email</FormLabel>
-              <Input placeholder='Last name' name="Email"  onChange={handleChangeForm} />
+              <Input placeholder='Email' _placeholder={{ opacity: 1, color: 'gray.600' }} name="Email"  onChange={handleChangeForm} />
               <FormLabel className="home-pad" name="Number">Whatsapp Number</FormLabel>
-              <Input placeholder='Last name' name="Number" onChange={handleChangeForm} />
+              <Input placeholder='Enter your number' _placeholder={{ opacity: 1, color: 'gray.600' }} name="Number" onChange={handleChangeForm} />
               <div className="home-pad"></div>
-              <Button colorScheme="red" type="submit">Submit</Button>
+              <Button colorScheme="blackAlpha" type="submit">Submit</Button>
          
               </form>
-          </ModalBody>
-          <ModalFooter className="modal-bg">
-             </ModalFooter>
-        </ModalContent>
-      </Modal> */}
-      {/* <div className={app}>
-              <div className="main">
-                        <div className="popup">
-                            <div className="popup-header">
-                                <h1>popup</h1>
-                                <h1 onClick={close}>X</h1>
-                            </div>
-                            <div>
-                            <p>This is simple popup in React js</p>
-                            </div>
-                        </div>
-                    </div>
-                    </div> */}
+              </div>
+      </Modal>
+
 
       <div className='nav-sticky'>
         <Navbar />

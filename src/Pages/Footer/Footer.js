@@ -8,12 +8,18 @@ import ListGroup from "react-bootstrap/ListGroup";
 import "react-responsive-modal/styles.css";
 import { Modal } from "react-responsive-modal";
 import Boxe from "../Boxe/Boxe";
+import Pricing from "../Pricing/Pricing";
 
 const Footer = () => {
   const [open, setOpen] = React.useState(false);
 
   const onOpenModal = () => setOpen(true);
   const onCloseModal = () => setOpen(false);
+
+  const [open1, setOpen1] = React.useState(false);
+
+  const onOpenModal1 = () => setOpen1(true);
+  const onCloseModal1 = () => setOpen1(false);
 
   return (
     <div className="totalf">
@@ -22,14 +28,21 @@ const Footer = () => {
           <Boxe />
         </div>
       </Modal>
+      <Modal className="mode" open={open1} onClose={onCloseModal1}>
+        <div className="mode">
+          <Pricing />
+        </div>
+      </Modal>
       <div className="footT">
         <div className="leftf">
           <div className="logof">
+          <NavLink to="/">
             <img
               className="logF"
               src="https://res.cloudinary.com/dcyfkgtgv/image/upload/v1673081748/bita-final-removebg-preview_hrfoev.png"
               alt="nf"
             />
+            </NavLink>
           </div>
           <div className="leftf-b">
             <div className="ico">
@@ -94,12 +107,12 @@ const Footer = () => {
               </ListGroup.Item>
               <ListGroup.Item action variant="dark">
                 <li>
-                  <a href="#/Newroom">Pricing</a>
+                <div className="foot-loc" onClick={onOpenModal1}>Pricing</div>
                 </li>
               </ListGroup.Item>
               <ListGroup.Item action variant="dark">
                 <li>
-                  <a href="#/Purpose">Testimonial</a>
+                  <a href="/testimonial">Testimonial</a>
                 </li>
               </ListGroup.Item>
             </ListGroup>

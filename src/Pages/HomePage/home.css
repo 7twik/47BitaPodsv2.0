@@ -221,9 +221,10 @@
         font-size: 1.2em !important;
     }
     .top-loca{
-        width: 100vw !important;
-        display: flex !important;
-        justify-content: center !important;
+        display: flex!important;
+        justify-content: center!important;
+        width: 80vw !important;
+        padding-top: 5vh !important;
     }
   }
 /*   

@@ -171,8 +171,7 @@ const Footer = () => {
               </ListGroup.Item>
               <ListGroup.Item action variant="dark">
                 <li>
-                  Godrej Genesis, Block EP & GP Opp to Syndicate Bank, Sector V,
-                  Salt Lake City, Kolkata, West Bengal 700091, India
+                1-A, Mohan Kunja Apartment, Ground Floor, North, Biman Nagar, Kaikhali, Kolkata, West Bengal 700052
                 </li>
               </ListGroup.Item>
             </ListGroup>

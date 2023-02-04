@@ -1,0 +1,51 @@
+.Contact-gap{
+    min-height: 10vh;
+}
+.Footerz{
+    position: relative;
+    z-index: -1;
+}
+.sec2{
+    width:100vw;
+    padding-left: 17vw;
+    padding-right: 17vw;
+    display: flex;
+    align-items: center;
+}
+.sec2w{
+    display: flex;
+    align-items: center;
+}
+@media (max-height: 700px){
+    .sec2{
+        display:flex;
+        flex-direction: column !important;
+        width:100vw !important;
+        padding-left: 10vw !important;
+        padding-right: 10vw !important;
+    }
+    .sec2-left{
+        padding-top: 2vw !important;
+        padding-bottom: 2vw !important;
+        width:80vw !important;
+        height: 100vh !important;
+    }
+    .sec2-right{
+        padding-top: 2vw !important;
+        padding-bottom: 2vw !important;
+        width:80vw !important;
+    }
+}
+@media (max-width: 700px){
+    .sec2{
+        width: 92vw !important;
+        padding-left: 4vw !important;
+        padding-right: 4vw !important;
+    }
+    .sec2-left{
+        padding-bottom: 30vh !important;
+    }
+    .sec2-right{
+        height:fit-content !important;
+    }
+}

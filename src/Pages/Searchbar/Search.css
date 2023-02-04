@@ -1,0 +1,36 @@
+.filser{
+    background-color: rgb(198, 196, 196);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.searchcon{
+    display:flex;
+    justify-content: center;
+    margin:10vh auto 5vh;
+}
+.inputtab{
+    width: 30vw;
+    border-radius: 3px;
+    padding: 0.5rem;
+}
+.searchIcon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    color: white;
+    width: 2vw;
+    border-radius: 3px;
+    padding: 0.5rem;
+}
+.buttondiv{
+    display: flex;
+}
+.filbut{
+    margin: auto 1rem;
+    border-radius: 3px;
+    background-color: red;
+    color: white;
+}

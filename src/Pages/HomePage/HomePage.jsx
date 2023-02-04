@@ -1,4 +1,8 @@
 import "./home.css";
+import { NavLink } from 'react-router-dom';
+import '../Navbar/navbar.css';
+import "../Contacte/Contacte.css"
+import { BsFillHddStackFill } from "react-icons/bs";
 import Dropdown from "react-bootstrap/Dropdown";
 import Faq from "../FAQ/Faq";
 import Navbar from "../Navbar/Navbar";
@@ -8,7 +12,7 @@ import Footer from "../Footer/Footer";
 import Work from "../Work/Work";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import React from "react";
+import React, { useState } from "react";
 import Amenities from "../Amenities/Amenities";
 import CarouselD from "../Carousel/CarouselD";
 import emailjs from "emailjs-com";
@@ -26,8 +30,17 @@ import {
   Input,
 } from "@chakra-ui/react";
 import Search from "../Searchbar/Search";
+import ContactForm from "../ContactForm/ContactForm";
+import Contacte from "../Contacte/Contacte";
 //import { useDisclosure } from '@chakra-ui/react'
 function HomePage() {
+
+  const [showNavbar, setShowNavbar] = useState(false)
+
+  const handleShowNavbar = () => {
+    setShowNavbar(!showNavbar)
+  }
+  
   const [input, setInput] = React.useState(true);
   React.useEffect(() => {
     AOS.init();
@@ -168,7 +181,45 @@ function HomePage() {
       </Modal>
 
       <div className="nav-sticky">
-        <Navbar />
+      <div className='nav-sticky'>
+    <nav className="navbar">
+      <div className="container">
+        <div className="logo">
+        <NavLink to="/">
+        <img className='logN' src="https://res.cloudinary.com/dcyfkgtgv/image/upload/v1673081748/bita-final-removebg-preview_hrfoev.png" alt="nf" />
+        </NavLink>
+          {/* <img className='logN' src="https://res.cloudinary.com/dcyfkgtgv/image/upload/c_pad,b_auto:predominant,fl_preserve_transparency/v1672838305/Dark_Beige_Modern_Real_Estate_Building_Logo-removebg-preview_xx8tar.jpg" alt="nf" /> */}
+        </div>
+        <div className="menu-icon" onClick={handleShowNavbar}>
+          <BsFillHddStackFill />
+        </div>
+        <div className={`nav-elements  ${showNavbar && 'active'}`}>
+          <ul>
+            <li className='hov'>
+              <NavLink to="/">
+                Home
+                </NavLink>
+            </li>
+            <li className='hov'>
+              <NavLink to="/WorkPlaces">WorkPlaces</NavLink>
+            </li>
+            <li className='hov'>
+              <NavLink to="/blog">Blog</NavLink>
+            </li>
+            
+            <li className='hov'>
+              <NavLink to="/about">About</NavLink>
+            </li>
+
+            <li className='hov'>
+              <a href="#contactcon">Contact</a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+    </div>
       </div>
 
       <header className="App-header">
@@ -181,7 +232,7 @@ function HomePage() {
                 500 company—we have flexible solutions for all the ways you
                 work.
               </div>
-              <Dropdown className="top-loca">
+              {/* <Dropdown className="top-loca">
                 <Dropdown.Toggle
                   id="dropdown-basic"
                   className="top-local"
@@ -197,7 +248,7 @@ function HomePage() {
                   <Dropdown.Item href="#/action-3">Chinar Park</Dropdown.Item>
                   <Dropdown.Item href="#/action-3">Dum Dum</Dropdown.Item>
                 </Dropdown.Menu>
-              </Dropdown>
+              </Dropdown> */}
             </div>
             <div className="slide">
               <Carousel
@@ -233,8 +284,17 @@ function HomePage() {
           </section>
         </div>
       </header>
-      <div>
-        {/* <Search /> */}
+      <div id="contid">
+        {/* <Contacte /> */}
+        <div className='part2' id="contactcon">
+            <div className='Contact' data-aos="fade-up">Contact &nbsp; Us</div>
+            <div className='sec2'>
+                <div className='sec2w' data-aos="zoom-in-left">
+                    <ContactForm />
+                </div>
+            </div>
+        </div>
+        <div className="Contact-gap"></div>
       </div>
       <div className="Carou-f1" data-aos="fade-up">
         <div className="carou-f2">
@@ -243,7 +303,7 @@ function HomePage() {
         <div className="Carou-f3">
           Our elegant and fully tech-enabled office spaces are designed keeping
           your needs in mind. Be it a single desk, a private cabin, a meeting
-          room or a larger space for your entire team – Awfis is your one-stop
+          room or a larger space for your entire team – 47BitaPods is your one-stop
           solution.
         </div>
       </div>
@@ -263,17 +323,6 @@ function HomePage() {
         </div>
         <Amenities />
       </div>
-      {/* <div className='part2'>
-                <div className='Contact' data-aos="fade-up">Contact &nbsp; Us</div>
-                <div className='sec2' ref={ref}>
-                  <div className="sec2-left" data-aos="zoom-in-right">
-                    <img className="imgbf" src="https://media.licdn.com/dms/image/C4D22AQETnjqUWKXOJw/feedshare-shrink_800/0/1669935389766?e=1674691200&v=beta&t=hN-MAbrWTQZrb5fHM-1vc3ptyHcqSl1tyEvEx-j1IPY" alt="not loaded" />
-                  </div>
-                  <div className='sec2-right' data-aos="zoom-in-left">
-                    <Form />
-                  </div>
-                </div>
-              </div> */}
       <div className="Faq">
         <div className="Faqq" data-aos="fade-up">
           F.A.Q.

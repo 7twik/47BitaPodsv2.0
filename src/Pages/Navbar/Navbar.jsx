@@ -10,7 +10,7 @@ const Navbar = () => {
   const handleShowNavbar = () => {
     setShowNavbar(!showNavbar)
   }
-
+  
   return (
     <div className='nav-sticky'>
     <nav className="navbar">
@@ -39,11 +39,13 @@ const Navbar = () => {
             </li>
             
             <li className='hov'>
-              <NavLink to="/contact">Contact</NavLink>
-            </li>
-            <li className='hov'>
               <NavLink to="/about">About</NavLink>
             </li>
+            
+            <li className='hov'>
+              <NavLink to="/">Contact</NavLink>
+            </li>
+           
           </ul>
         </div>
       </div>

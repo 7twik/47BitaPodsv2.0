@@ -15,7 +15,7 @@ const Faq = () => {
                     <Accordion.Item eventKey="1" variant="re">
                     <Accordion.Header data-aos="fade-right">Can I alter my workspace in any other location?</Accordion.Header>
                         <Accordion.Body>
-                        You cannot alter or change any part of your workspace without permission from staff. Any physical signs of damage or alteration to our property may incur a fine, and if egregious enough may cause you to be barred from ZIOKS. However you may customise your workspace with some decor provided that you have prior consent from us.
+                        You cannot alter or change any part of your workspace without permission from staff. Any physical signs of damage or alteration to our property may incur a fine, and if egregious enough may cause you to be barred from 47BitaPods. However you may customise your workspace with some decor provided that you have prior consent from us.
                         </Accordion.Body>
                     </Accordion.Item>
 
@@ -81,7 +81,7 @@ const Faq = () => {
             <Accordion.Item eventKey="10"  data-aos="fade-left">
             <Accordion.Header>What does 47BitaPods offer that others dont?</Accordion.Header>
                 <Accordion.Body>
-                        ZIOKS is a shared co-working workspace that allows small businesses, individuals, and entrepreneurs so grow their business without worrying about space. Our space is strategically designed to let you and other people to connect, co-work and create new business opportunities. We also have modern amenities and services specifically designed to make your stay as comfortable as your home.
+                        47Bita Pods is a shared co-working workspace that allows small businesses, individuals, and entrepreneurs so grow their business without worrying about space. Our space is strategically designed to let you and other people to connect, co-work and create new business opportunities. We also have modern amenities and services specifically designed to make your stay as comfortable as your home.
                 </Accordion.Body>
             </Accordion.Item>
         </Accordion>

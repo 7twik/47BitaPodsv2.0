@@ -166,7 +166,7 @@
     display: flex;
     flex-wrap:wrap;
     width: 92vh;
-    height: 54vh;
+    height: 44vh;
     color:#000000 ;
     overflow-wrap:inherit;
     /* background-color: white; */
@@ -221,9 +221,10 @@
         font-size: 1.2em !important;
     }
     .top-loca{
-        width: 100vw !important;
-        display: flex !important;
-        justify-content: center !important;
+        display: flex!important;
+        justify-content: center!important;
+        width: 80vw !important;
+        padding-top: 5vh !important;
     }
   }
 /*   
@@ -349,6 +350,7 @@
     justify-content: space-between;
     background-color: #ffffff;
     background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+    z-index: -10;
 }
 .carou-f2{
     

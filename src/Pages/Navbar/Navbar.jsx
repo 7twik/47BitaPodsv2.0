@@ -10,14 +10,15 @@ const Navbar = () => {
   const handleShowNavbar = () => {
     setShowNavbar(!showNavbar)
   }
-
+  
   return (
     <div className='nav-sticky'>
     <nav className="navbar">
       <div className="container">
         <div className="logo">
+        <NavLink to="/">
         <img className='logN' src="https://res.cloudinary.com/dcyfkgtgv/image/upload/v1673081748/bita-final-removebg-preview_hrfoev.png" alt="nf" />
-        
+        </NavLink>
           {/* <img className='logN' src="https://res.cloudinary.com/dcyfkgtgv/image/upload/c_pad,b_auto:predominant,fl_preserve_transparency/v1672838305/Dark_Beige_Modern_Real_Estate_Building_Logo-removebg-preview_xx8tar.jpg" alt="nf" /> */}
         </div>
         <div className="menu-icon" onClick={handleShowNavbar}>
@@ -38,11 +39,13 @@ const Navbar = () => {
             </li>
             
             <li className='hov'>
-              <NavLink to="/contact">Contact</NavLink>
-            </li>
-            <li className='hov'>
               <NavLink to="/about">About</NavLink>
             </li>
+            
+            <li className='hov'>
+              <NavLink to="/">Contact</NavLink>
+            </li>
+           
           </ul>
         </div>
       </div>

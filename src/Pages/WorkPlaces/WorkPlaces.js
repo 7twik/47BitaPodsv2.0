@@ -47,7 +47,7 @@ const WorkPlaces = () => {
                 <div className='work-rightt1'>
                     <ul>
                         <li className="work-point1">
-                            Let your ideas soar with Awfis’ flexible seats spread across a wide, open, common area.
+                            Let your ideas soar with 47Bita Pods’ flexible seats spread across a wide, open, common area.
                         </li>
                         <li className="work-point1">
                             Choose from a variety of ergonomically designed ‘hot desks’, set stations for the day and start working.
@@ -102,7 +102,7 @@ const WorkPlaces = () => {
           </div>
             <div className='work-right' data-aos="zoom-in-right1">
                 <div className="h21">Fixed seats</div>
-                <div className='work-rightt'>
+                <div className='work-rightt1'>
                     <ul>
                         <li className="work-point1">
                             For those who want their personal space untouched, this is your permanent spot in a shared area.

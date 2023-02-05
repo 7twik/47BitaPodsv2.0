@@ -1,0 +1,10 @@
+#preloader{
+    /* background:rgb(300, 300, 300) url("https://cdn.dribbble.com/users/1787505/screenshots/7300251/media/a351d9e0236c03a539181b95faced9e0.gif") no-repeat center center; */
+    background:rgb(236, 238, 247) url("https://i.gifer.com/origin/b1/b128497bc8d6fcfefb93b88b260561a7_w200.gif")no-repeat center center; 
+    height:100vh;
+    width:208vh;
+    position: fixed;
+    z-index:100;
+    background-size: 15%;
+    margin-left: -0.81rem;
+  }

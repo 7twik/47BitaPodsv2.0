@@ -463,7 +463,7 @@ const ContactForm = () => {
             </div>
           </div>
 
-          <div className={hide5}>
+          <div className={hide3}>
             <div className="form-left1 bordel">
               <FormLabel className="spacelabel">Starting Date</FormLabel>
               <Box

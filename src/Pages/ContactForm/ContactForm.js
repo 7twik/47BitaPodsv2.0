@@ -204,7 +204,7 @@ const ContactForm = () => {
     if (form.Location !== "" && form.City !== "" && form.Livtype !== "") {
       set1("form-total");
       set4("form-total2");
-      set5("form-total55");
+      // set5("form-total55");
     }
   }, [form]);
   React.useEffect(() => {

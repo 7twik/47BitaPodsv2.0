@@ -214,8 +214,9 @@ const ContactForm = () => {
       form.Number !== "" &&
       form.Email !== ""
     )
-      set2("form-total");
+    { set2("form-total");
       set3("form-total55");
+    }
   }, [form]);
   React.useEffect(() => {
     if (form.startDate !== "" && form.endDate !== "" && hide2 !== "invisible")

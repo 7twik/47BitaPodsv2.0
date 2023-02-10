@@ -1,6 +1,7 @@
 import { Heading, Image,Stack,Text,Divider,Button,ButtonGroup } from '@chakra-ui/react'
 import { Card,  CardBody, CardFooter } from '@chakra-ui/react'
 import React from "react";
+import "./Carde.css";
 const Carde =(props) =>{
   const [url,seturl]=React.useState("https://images.unsplash.com/photo-1444723121867-7a241cacace9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Y2l0eXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60")
   React.useEffect(()=>{

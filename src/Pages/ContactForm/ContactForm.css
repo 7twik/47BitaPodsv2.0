@@ -153,8 +153,9 @@
         font-size: 1.3vh !important;
     }
     .form-container12{
-        width: 92vw !important;
-        margin-left: 8vw;
+        width: 90vw !important;
+        margin-left: 5vw !important;
+        margin-right:5vw !important;
     }
     .form-left,
     .form-right{

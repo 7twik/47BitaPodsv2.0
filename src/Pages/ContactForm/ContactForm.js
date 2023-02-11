@@ -249,7 +249,23 @@ const ContactForm = () => {
       };
     });
   }
-
+  const onCheck = async (event) =>{
+    if (
+      form.State === "" ||
+      form.City === "" ||
+      form.Location === "" ||
+      form.Livtype === "" ||
+      form.Name === "" ||
+      form.Email === "" ||
+      form.Number === 0 ||
+      form.No === 0
+    ) {
+      setInput(false);
+    }
+    else{
+        onOpenModal1();
+    }
+  }
   const submitNoteForm = async (event) => {
     if (
       form.State === "" ||
@@ -546,7 +562,7 @@ const ContactForm = () => {
               <Button
                 className="form-buttonf"
                 colorScheme="red"
-                onClick={onOpenModal1}
+                onClick={onCheck}
               >
                 <div className="form-subm">Check</div>
               </Button>

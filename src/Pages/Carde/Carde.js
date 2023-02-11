@@ -35,16 +35,6 @@ const Carde =(props) =>{
               </Stack>
             </CardBody>
             <Divider />
-            {/* <CardFooter>
-              <ButtonGroup spacing='2'>
-                <Button variant='solid' colorScheme='blue'>
-                  Book now
-                </Button>
-                <Button variant='ghost' colorScheme='blue'>
-                  Click for more info
-                </Button>
-              </ButtonGroup>
-            </CardFooter> */}
           </Card>
     )
     }

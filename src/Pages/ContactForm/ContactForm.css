@@ -144,17 +144,18 @@
 @media (max-width: 700px) {
     .form-bot,
     .form-container1{
-        width:90vw;
-        margin-left: 5vw;
-        margin-right: 5vw;
+        width:90vw !important;
+        margin-left: 5vw !important;
+        margin-right: 5vw !important;
         margin-top: -30vh;
     }
     ::placeholder{
         font-size: 1.3vh !important;
     }
     .form-container12{
-        width: 92vw !important;
-        margin-left: 8vw;
+        width:90vw !important;
+        margin-left: 5vw !important;
+        margin-right: 5vw !important;
     }
     .form-left,
     .form-right{

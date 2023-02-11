@@ -141,6 +141,7 @@
         width:15vw;
     }
 }
+
 @media (max-width: 700px) {
     .form-bot,
     .form-container1{
@@ -153,9 +154,8 @@
         font-size: 1.3vh !important;
     }
     .form-container12{
-        width: 90vw !important;
-        margin-left: 5vw !important;
-        margin-right:5vw !important;
+        width: 92vw !important;
+        margin-left: 8vw;
     }
     .form-left,
     .form-right{
@@ -384,4 +384,9 @@
     position: relative;
     text-align: left;
     width: 20vw;
+}
+@media (max-height: 300px) {
+    ::placeholder{
+        font-size: larger;
+    }
 }

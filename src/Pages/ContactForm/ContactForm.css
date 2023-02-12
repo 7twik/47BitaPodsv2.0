@@ -391,3 +391,14 @@
         font-size: larger;
     }
 }
+
+.react-datepicker-popper {
+    z-index: 7000 !important;
+  }
+  .calendar-popout{
+    z-index:7000 !important;
+  }
+  .Carou-f1.aos-init.aos-animate {
+    z-index: -100 !important;
+    position: relative;
+}

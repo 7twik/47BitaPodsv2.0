@@ -1,13 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&family=Mulish&family=Yeon+Sung&family=Sevillana&family=Moon+Dance&family=McLaren&family=Montserrat&family=Roboto&family=Oswald:wght@300&display=swap');
 .privcon{
     padding-left: 10vw;
     padding-right: 10vw;
     color: rgb(69, 67, 67);
     font-size: 18px;
+    font-family: "Roboto";
 }
 .privh1{
     font-size: 2rem;
-    margin-bottom: 5px;
-    font-weight: 500;
+    margin-top: 2vh;
+    margin-bottom: 5vh;
+    font-weight: 600;
     color: rgb(237, 37, 37);
     display:flex;
     position: sticky;
@@ -17,26 +21,32 @@
 
 .list{
     padding-left: 15px;
+    font-size: 1.1rem;
 }
+
 .privh2{
     font-size: 1.45rem;
     padding-top: 10px;
     padding-bottom: 10px;
-    font-weight: 500;
+    font-weight: 680;
     color: black;
+    margin-top: 1.5vh;
+    margin-bottom: 1.5vh;
 }
 .privh3{
     font-size: 1.4rem;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    font-weight: 300;
+    padding-top:3vh;
+    padding-bottom: 3vh;
+    font-weight: 550 !important;
     color: black;
 }
 .privh4{
     font-size: 1.2rem;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
     padding-top: 10px;
     padding-bottom: 10px;
-    font-weight: 250;
+    font-weight: 600;
     color: black;
 }
 .gapz{

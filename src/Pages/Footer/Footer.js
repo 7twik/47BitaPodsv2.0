@@ -179,7 +179,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="footB">
-        <NavLink to="/t&c"> Privacy Policy </NavLink>&nbsp; <div className="divslash">|</div> &nbsp;
+        <a href="/t&c"> Privacy Policy </a>&nbsp; <div className="divslash">|</div> &nbsp;
         <NavLink  to="/" className="footB-b">
           <p style={{ cursor: "pointer",display:"flex" }}>
             2023 47BitaPods Pvt. Ltd. <div className="divslash">&nbsp;|</div>

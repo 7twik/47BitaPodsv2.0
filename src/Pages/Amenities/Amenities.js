@@ -78,7 +78,7 @@ const Amenities = () => {
             </div>
         </div>
         <div className='Ame-right' data-aos="fade-up-left">
-            <img className='Ame-img' src="https://source.unsplash.com/1600x900/?city" alt="nf" />
+            <img className='Ame-img' src="https://images.unsplash.com/photo-1604328727766-a151d1045ab4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8Y293b3JraW5nfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=2000&q=60" alt="nf" />
         </div>
     </div>
   )

@@ -100,11 +100,11 @@ const Footer = () => {
                 <li><a href="#/Mission">Mission</a></li></ListGroup.Item>
                 <ListGroup.Item action variant="dark">
                 <li><a href="#/Inclusion">Inclusion & Diversity</a></li></ListGroup.Item> */} 
-              <ListGroup.Item action variant="dark">
+{/*<ListGroup.Item action variant="dark">
                 <li>
                   <a href="#/Investors">Other Tech amenities</a>
                 </li>
-              </ListGroup.Item>
+              </ListGroup.Item>*/}
               <ListGroup.Item action variant="dark">
                 <li>
                 <div className="foot-loc" onClick={onOpenModal1}>Pricing</div>

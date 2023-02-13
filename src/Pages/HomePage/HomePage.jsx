@@ -228,27 +228,9 @@ function HomePage() {
             <div className="top-card banner-msg-box form_container msg">
               <div className="top-Header">Find your perfect workspace</div>
               <div className="top-middle">
-                Whether you’re a team of one, a growing startup, or a Fortune
-                500 company—we have flexible solutions for all the ways you
-                work.
+                Whether you’re a team of one or a growing startup, we have flexible solutions for all the ways you
+                work and living.
               </div>
-              {/* <Dropdown className="top-loca">
-                <Dropdown.Toggle
-                  id="dropdown-basic"
-                  className="top-local"
-                  variant="dark"
-                  size="lg"
-                >
-                  Location
-                </Dropdown.Toggle>
-
-                <Dropdown.Menu>
-                  <Dropdown.Item href="#/action-1">Sector 5</Dropdown.Item>
-                  <Dropdown.Item href="#/action-2">Baguihati</Dropdown.Item>
-                  <Dropdown.Item href="#/action-3">Chinar Park</Dropdown.Item>
-                  <Dropdown.Item href="#/action-3">Dum Dum</Dropdown.Item>
-                </Dropdown.Menu>
-              </Dropdown> */}
             </div>
             <div className="slide">
               <Carousel
@@ -301,10 +283,7 @@ function HomePage() {
           Amazing office spaces, all at premium locales
         </div>
         <div className="Carou-f3">
-          Our elegant and fully tech-enabled office spaces are designed keeping
-          your needs in mind. Be it a single desk, a private cabin, a meeting
-          room or a larger space for your entire team – 47BitaPods is your one-stop
-          solution.
+        47BITA PODS is a tech-savvy and flexible co-working space that endures four major aspects like productivity, creativity, and networking with innovation as its backbone through a set of seven unique amenities in Kolkata, India. We have all sorts of amenities like co-working, private cabins, meeting rooms, event rooms, interview rooms, sweet rooms and cafe
         </div>
       </div>
 

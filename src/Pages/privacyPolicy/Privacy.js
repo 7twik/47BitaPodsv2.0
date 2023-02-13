@@ -159,8 +159,8 @@ const Privacy = () => {
         <h4 className="privh4"> Contact Us</h4>
         <p>
           If you have any questions about this Privacy Policy, please contact
-          us: By email: support@47BitaPods.com By visiting this page on our website:
-          www.47BitaPods.com/contact
+          us: By email:<a href="mailto:support@47BitaPods.com">support@47BitaPods.com</a>  By visiting this page on our website:&nbsp;
+         <a href="/">www.47BitaPods.com</a> 
         </p>
       </div>
       <div className="gapz">

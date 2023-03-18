@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useState } from "react";
 import "./ContactForm.css";
 import { Box } from "@chakra-ui/react";
 import axios from "axios";
@@ -8,8 +8,6 @@ import setMinutes from "date-fns/setMinutes";
 import "react-datepicker/dist/react-datepicker.css";
 import { Multiselect } from "multiselect-react-dropdown";
 import moment from "moment";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 
 import "react-responsive-modal/styles.css";
 import { Modal } from "react-responsive-modal";
@@ -56,6 +54,15 @@ const ContactForm = (props) => {
     Roomtype: "",
     Rooms: [],
   });
+  const [sinput,setsinput]=React.useState(true);
+  function showw()
+  {
+    setsinput(false);
+  }
+  function noshow()
+  {
+    setsinput(true);
+  }
   const [hide1, set1] = React.useState("invisible");
   const [hide2, set2] = React.useState("invisible");
   const [hide3, set3] = React.useState("invisible");
@@ -271,7 +278,7 @@ const ContactForm = (props) => {
       form.endDate=== undefined ||
       form.startDate=== null ||
       form.endDate=== null
-      form.No === 0
+      
     ) {
       setInput(false);
     }
@@ -301,10 +308,10 @@ const ContactForm = (props) => {
     }
   };
 
-  const ref = useRef(null);
+  const ref = React.useRef(null);
   const { onClickOutside } = props;
 
-  useEffect(() => {
+  React.useEffect(() => {
     const handleClickOutside = (event) => {
       if (ref.current && !ref.current.contains(event.target)) {
         onClickOutside && onClickOutside();
@@ -316,36 +323,11 @@ const ContactForm = (props) => {
     };
   }, [ onClickOutside ]);
 
-
-  useEffect(()=>{
-    if(props.co)
-    {
-      setInput(false);
-    }
-  },[])
-  // if(!props.show)
-  //   return null;
-
-  const [sinput,setsinput]=React.useState(true);
-  // function showww(){
-  //   setsinput(false);
-  // }
-  function showw()
-  {
-    setsinput(false);
-    // setTimeout(showww,1500); 
-  }
-  function noshow()
-  {
-    setsinput(true);
-  }
-
-
   return (
-    <div ref={ref} className="contact_section">
+    <div className="contact_section">
       <Modal className="mode" open={open1} onClose={onCloseModal1}>
         {isSubmit ?  <Cardee /> : <div className="mode">
-          <Carde loc={form.Location} />
+          <Carde loc={form.Location}  />
           <Button
             className="form-buttonf"
             colorScheme="red"
@@ -355,7 +337,8 @@ const ContactForm = (props) => {
           </Button>
         </div>}
       </Modal>
-      <div onMouseOver={noshow} onMouseOut={showw} className="form-container12">
+      
+      <div className="form-container12" onMouseOver={noshow} onMouseOut={showw}>
         <FormControl className="form-stack12">
           <div className="spacebb"></div>
           <div className="spacebb"></div>
@@ -364,13 +347,11 @@ const ContactForm = (props) => {
           ) : (
             <div className="errorr">* Fill all fields</div>
           )}
-
           {sinput === true ? (
-            <></>
+            <div className="errorr"></div>
           ) : (
             <div className="errorr">* You need to fill all fields to proceed</div>
           )}
-
 
           {/* PART 1 */}
           <div className="form-total10 ">

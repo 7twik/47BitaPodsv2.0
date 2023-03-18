@@ -24,7 +24,7 @@ import {
   FormLabel,
   Input,
 } from "@chakra-ui/react";
-import Search from "../Searchbar/Search";
+//import Search from "../Searchbar/Search";
 import ContactForm from "../ContactForm/ContactForm";
 import Contacte from "../Contacte/Contacte";
 //import { useDisclosure } from '@chakra-ui/react'

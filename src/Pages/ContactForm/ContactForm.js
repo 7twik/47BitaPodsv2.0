@@ -271,7 +271,7 @@ const ContactForm = (props) => {
       form.endDate=== undefined ||
       form.startDate=== null ||
       form.endDate=== null
-      
+      form.No === 0
     ) {
       setInput(false);
     }

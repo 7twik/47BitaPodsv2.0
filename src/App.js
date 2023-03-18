@@ -15,7 +15,7 @@ function App() {
       <header className="App-header">
       <Call />
         <Routes>
-            <Route path="/" element={<HomePage />}/>
+            <Route path="/" element={<HomePage  />}/>
             <Route path="/workplaces" element={<WorkPlaces />}/>
             <Route path="/blog" element={<Blog />}/>
             <Route path="/AddBlog" element={<AddBlog />}/>

@@ -1,14 +1,17 @@
-import React from 'react';
-// import Footer from '../Footer/Footer';
-// import Navbar from '../Navbar/Navbar';
+import React, { useEffect, useRef } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './Contacte.css';
 import ContactForm from '../ContactForm/ContactForm';
-const Contacte = () => {
+const Contacte = (props) => {
     React.useEffect(() => {
         AOS.init();
       }, []);
+
+
+      
+
+
   return (
     <div>
         <div className='part2'>

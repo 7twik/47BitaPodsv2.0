@@ -12,7 +12,7 @@ import Footer from "../Footer/Footer";
 import Work from "../Work/Work";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Amenities from "../Amenities/Amenities";
 import CarouselD from "../Carousel/CarouselD";
 import emailjs from "emailjs-com";
@@ -21,11 +21,6 @@ import "react-responsive-modal/styles.css";
 import { Modal } from "react-responsive-modal";
 import { Button } from "@chakra-ui/react";
 import {
-  // ModalContent,
-  // ModalHeader,
-  // ModalFooter,
-  // ModalCloseButton,
-  // ModalBody,
   FormLabel,
   Input,
 } from "@chakra-ui/react";
@@ -33,8 +28,8 @@ import {
 import ContactForm from "../ContactForm/ContactForm";
 import Contacte from "../Contacte/Contacte";
 //import { useDisclosure } from '@chakra-ui/react'
-function HomePage() {
-
+function HomePage() { 
+  const [co,setCo]=useState(false)
   const [showNavbar, setShowNavbar] = useState(false)
 
   const handleShowNavbar = () => {
@@ -51,16 +46,6 @@ function HomePage() {
     Email: "",
     Number: "",
   });
-  // React.useEffect(()=>{
-  //   if ((form.Name!=="")&&(form.Email!==""))
-  //   {
-  //     setFdone(true);
-  //   }
-  //   else
-  //   {
-  //     setFdone(false);
-  //   }
-  // })
 
   function handleChangeForm(event) {
     const { name, value } = event.target;
@@ -73,9 +58,7 @@ function HomePage() {
     });
   }
 
-  // const { isOpen, onOpen, onClose } = useDisclosure();
-  //const [app,setApp]=React.useState("toastee")
-  //const myTimeout = setTimeout(myGreeting, 5000);
+
   function myGreeting() {
     onOpenModal();
     // setApp("toaste");
@@ -120,7 +103,8 @@ function HomePage() {
       onCloseModal();
     }
   }
-
+ 
+  
   return (
     <div className="App">
       <span className="sp"></span>
@@ -222,7 +206,7 @@ function HomePage() {
     </div>
       </div>
 
-      <header className="App-header">
+      <header className="App-header" onClick={()=>setCo(true)}>
         <div className="body">
           <section className="contain">
             <div className="top-card banner-msg-box form_container msg">
@@ -272,13 +256,13 @@ function HomePage() {
             <div className='Contact' data-aos="fade-up">Contact &nbsp; Us</div>
             <div className='sec2'>
                 <div className='sec2w' data-aos="zoom-in-left">
-                    <ContactForm />
+                    <ContactForm co={co} onClickOutside={()=>{console.log("alert!")}} />
                 </div>
             </div>
         </div>
         <div className="Contact-gap"></div>
       </div>
-      <div className="Carou-f1" data-aos="fade-up">
+      <div className="Carou-f1" data-aos="fade-up" onClick={()=>setCo(true)}>
         <div className="carou-f2">
           Amazing office spaces, all at premium locales
         </div>

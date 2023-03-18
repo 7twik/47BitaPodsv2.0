@@ -27,21 +27,21 @@ const Pricing = () => {
             <Stack mt="6" spacing="3">
               <Heading size="md">Daily Seats</Heading>
               <Text style={{ fontWeight: "500" }}>
-                ₹499 (Per person + taxes)
+                ₹99-₹499 (Per person + taxes)
               </Text>
             </Stack>
           </CardBody>
           <Divider />
-          <CardFooter>
-            <ButtonGroup spacing="2">
+          {/* <CardFooter>
+            {/* <ButtonGroup spacing="2">
               <Button variant="solid" colorScheme="blackAlpha">
                 Enquire now
               </Button>
               <Button variant="ghost" colorScheme="blue">
                 Click for more info
               </Button>
-            </ButtonGroup>
-          </CardFooter>
+            </ButtonGroup> 
+          </CardFooter> */}
         </Card>
 
         <Card minW="sm" maxW="sm">
@@ -54,12 +54,12 @@ const Pricing = () => {
             <Stack mt="6" spacing="3">
               <Heading size="md">Open Space</Heading>
               <Text style={{ fontWeight: "500" }}>
-                ₹249 (Per person + taxes)
+                ₹99 (Hourly + taxes)
               </Text>
             </Stack>
           </CardBody>
           <Divider />
-          <CardFooter>
+          {/* <CardFooter>
             <ButtonGroup spacing="2">
               <Button variant="solid" colorScheme="blackAlpha">
                 Enquire now
@@ -68,7 +68,7 @@ const Pricing = () => {
                 Click for more info
               </Button>
             </ButtonGroup>
-          </CardFooter>
+          </CardFooter> */}
         </Card>
       </div>
       <div className="boxe-stack">
@@ -82,12 +82,12 @@ const Pricing = () => {
             <Stack mt="6" spacing="3">
               <Heading size="md">Private Cabin</Heading>
               <Text style={{ fontWeight: "500" }}>
-                ₹499 (Per person + taxes)
+                ₹500 (Daily per person + taxes)
               </Text>
             </Stack>
           </CardBody>
           <Divider />
-          <CardFooter>
+          {/* <CardFooter>
             <ButtonGroup spacing="2">
               <Button variant="solid" colorScheme="blackAlpha">
                 Enquire now
@@ -96,7 +96,7 @@ const Pricing = () => {
                 Click for more info
               </Button>
             </ButtonGroup>
-          </CardFooter>
+          </CardFooter> */}
         </Card>
 
         <Card minW="sm" maxW="sm">
@@ -109,12 +109,12 @@ const Pricing = () => {
             <Stack mt="6" spacing="3">
               <Heading size="md">Conference</Heading>
               <Text style={{ fontWeight: "500" }}>
-                ₹699 (Per person + taxes)
+                ₹200 (Per hour + taxes)
               </Text>
             </Stack>
           </CardBody>
           <Divider />
-          <CardFooter>
+          {/* <CardFooter>
             <ButtonGroup spacing="2">
               <Button variant="solid" colorScheme="blackAlpha">
                 Enquire now
@@ -123,7 +123,7 @@ const Pricing = () => {
                 Click for more info
               </Button>
             </ButtonGroup>
-          </CardFooter>
+          </CardFooter> */}
         </Card>
       </div>
     </div>

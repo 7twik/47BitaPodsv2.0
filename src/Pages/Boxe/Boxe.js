@@ -26,16 +26,7 @@ const Boxe = () => {
               </Stack>
             </CardBody>
             <Divider />
-            <CardFooter>
-              <ButtonGroup spacing='2'>
-                <Button variant='solid' colorScheme='blackAlpha'>
-                  Book now
-                </Button>
-                <Button variant='ghost' colorScheme='blue'>
-                  Click for more info
-                </Button>
-              </ButtonGroup>
-            </CardFooter>
+
           </Card>
 
 
@@ -47,7 +38,7 @@ const Boxe = () => {
                 borderRadius='lg'
               />
               <Stack mt='6' spacing='3'>
-                <Heading size='md'>Dum Dum</Heading>
+                <Heading size='md'>Ganganagar</Heading>
                 <Text style={{fontWeight:"500"}}>
                   This sofa is perfect for modern tropical spaces, baroque inspired
                   spaces, earthy toned spaces and for people who love a chic design with a
@@ -57,16 +48,6 @@ const Boxe = () => {
               </Stack>
             </CardBody>
             <Divider />
-            <CardFooter>
-              <ButtonGroup spacing='2'>
-                <Button variant='solid' colorScheme='blackAlpha'>
-                  Book now
-                </Button>
-                <Button variant='ghost' colorScheme='blue'>
-                  Click for more info
-                </Button>
-              </ButtonGroup>
-            </CardFooter>
           </Card>
 
         </div>
@@ -79,7 +60,7 @@ const Boxe = () => {
                 borderRadius='lg'
               />
               <Stack mt='6' spacing='3'>
-                <Heading size='md'>Baguihati</Heading>
+                <Heading size='md'>Haldiram</Heading>
                 <Text style={{fontWeight:"500"}}>
                   This sofa is perfect for modern tropical spaces, baroque inspired
                   spaces, earthy toned spaces and for people who love a chic design with a
@@ -89,16 +70,7 @@ const Boxe = () => {
               </Stack>
             </CardBody>
             <Divider />
-            <CardFooter>
-              <ButtonGroup spacing='2'>
-                <Button variant='solid' colorScheme='blackAlpha'>
-                  Book now
-                </Button>
-                <Button variant='ghost' colorScheme='blue'>
-                  Click for more info
-                </Button>
-              </ButtonGroup>
-            </CardFooter>
+            
           </Card>
 
 
@@ -110,7 +82,7 @@ const Boxe = () => {
                 borderRadius='lg'
               />
               <Stack mt='6' spacing='3'>
-                <Heading size='md'>Chinar Park</Heading>
+                <Heading size='md'>Chinar Park(I)</Heading>
                 <Text style={{fontWeight:"500"}}>
                   This sofa is perfect for modern tropical spaces, baroque inspired
                   spaces, earthy toned spaces and for people who love a chic design with a
@@ -120,16 +92,27 @@ const Boxe = () => {
               </Stack>
             </CardBody>
             <Divider />
-            <CardFooter>
-              <ButtonGroup spacing='2'>
-                <Button variant='solid' colorScheme='blackAlpha'>
-                  Book now
-                </Button>
-                <Button variant='ghost' colorScheme='blue'>
-                  Click for more info
-                </Button>
-              </ButtonGroup>
-            </CardFooter>
+          </Card>
+          </div>
+          <div className='boxe-stack'>
+          <Card minW='sm' maxW='sm'>
+            <CardBody>
+              <Image
+                src='https://images.unsplash.com/photo-1514565131-fce0801e5785?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGNpdHl8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60'
+                alt='Green double couch with wooden legs'
+                borderRadius='lg'
+              />
+              <Stack mt='6' spacing='3'>
+                <Heading size='md'>Chinar Park(II)</Heading>
+                <Text style={{fontWeight:"500"}}>
+                  This sofa is perfect for modern tropical spaces, baroque inspired
+                  spaces, earthy toned spaces and for people who love a chic design with a
+                  sprinkle of vintage design.
+                </Text>
+                
+              </Stack>
+            </CardBody>
+            <Divider />
           </Card>
         </div>
     </div>

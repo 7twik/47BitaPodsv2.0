@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./ContactForm.css";
 import { Box } from "@chakra-ui/react";
 import axios from "axios";
@@ -8,6 +8,8 @@ import setMinutes from "date-fns/setMinutes";
 import "react-datepicker/dist/react-datepicker.css";
 import { Multiselect } from "multiselect-react-dropdown";
 import moment from "moment";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import "react-responsive-modal/styles.css";
 import { Modal } from "react-responsive-modal";
@@ -23,7 +25,7 @@ import {
 import { setSeconds } from "date-fns";
 import Carde from "../Carde/Carde";
 import Cardee from "../Cardee/Cardee";
-const ContactForm = () => {
+const ContactForm = (props) => {
   const [options, setOptions] = useState([
     "Cabins",
     "Meeting Room",
@@ -218,16 +220,19 @@ const ContactForm = () => {
       form.Name !== "" &&
       form.No !== "" &&
       form.Number !== "" &&
-      form.Email !== ""
+      form.Email !== "" &&
+      form.Rooms.length !== 0
     ) {
+      console.log(form.Rooms);
       set2("form-total");
       set3("form-total55");
     }
   }, [form]);
-  React.useEffect(() => {
-    if (form.startDate !== "" && form.endDate !== "" && hide2 !== "invisible")
-      set3("form-total55");
-  }, [form]);
+  // React.useEffect(() => {
+  //   if (form.startDate !== "" && form.endDate !== "" && hide2 !== "invisible"&&
+  //   form.Rooms !== [])
+  //     set3("form-total55");
+  // }, [form]);
 
   const filterPassedTime = (time) => {
     const t1 = moment(avoid1, "HH:mm").toDate();
@@ -249,7 +254,32 @@ const ContactForm = () => {
       };
     });
   }
-
+  const onCheck = async (event) =>{
+    if (
+      form.State === "" ||
+      form.City === "" ||
+      form.Location === "" ||
+      form.Livtype === "" ||
+      form.Name === "" ||
+      form.Email === "" ||
+      form.Number === 0 ||
+      form.No === 0 ||
+      form.Rooms === [] ||
+      form.startDate=== "" ||
+      form.endDate=== "" ||
+      form.startDate=== undefined ||
+      form.endDate=== undefined ||
+      form.startDate=== null ||
+      form.endDate=== null
+      
+    ) {
+      setInput(false);
+    }
+    else{
+      console.log(form.startDate+",,"+form.endDate);
+        onOpenModal1();
+    }
+  }
   const submitNoteForm = async (event) => {
     if (
       form.State === "" ||
@@ -259,7 +289,8 @@ const ContactForm = () => {
       form.Name === "" ||
       form.Email === "" ||
       form.Number === 0 ||
-      form.No === 0
+      form.No === 0 ||
+      form.Rooms === []
     ) {
       setInput(false);
     } else {
@@ -270,8 +301,48 @@ const ContactForm = () => {
     }
   };
 
+  const ref = useRef(null);
+  const { onClickOutside } = props;
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (ref.current && !ref.current.contains(event.target)) {
+        onClickOutside && onClickOutside();
+      }
+    };
+    document.addEventListener('click', handleClickOutside, true);
+    return () => {
+      document.removeEventListener('click', handleClickOutside, true);
+    };
+  }, [ onClickOutside ]);
+
+
+  useEffect(()=>{
+    if(props.co)
+    {
+      setInput(false);
+    }
+  },[])
+  // if(!props.show)
+  //   return null;
+
+  const [sinput,setsinput]=React.useState(true);
+  // function showww(){
+  //   setsinput(false);
+  // }
+  function showw()
+  {
+    setsinput(false);
+    // setTimeout(showww,1500); 
+  }
+  function noshow()
+  {
+    setsinput(true);
+  }
+
+
   return (
-    <div className="contact_section">
+    <div ref={ref} className="contact_section">
       <Modal className="mode" open={open1} onClose={onCloseModal1}>
         {isSubmit ?  <Cardee /> : <div className="mode">
           <Carde loc={form.Location} />
@@ -284,7 +355,7 @@ const ContactForm = () => {
           </Button>
         </div>}
       </Modal>
-      <div className="form-container12">
+      <div onMouseOver={noshow} onMouseOut={showw} className="form-container12">
         <FormControl className="form-stack12">
           <div className="spacebb"></div>
           <div className="spacebb"></div>
@@ -293,6 +364,13 @@ const ContactForm = () => {
           ) : (
             <div className="errorr">* Fill all fields</div>
           )}
+
+          {sinput === true ? (
+            <></>
+          ) : (
+            <div className="errorr">* You need to fill all fields to proceed</div>
+          )}
+
 
           {/* PART 1 */}
           <div className="form-total10 ">
@@ -327,9 +405,10 @@ const ContactForm = () => {
                 placeholder="Select location"
               >
                 <option value="Sector 5">Sector 5</option>
-                <option value="Baguihati">Baguihati</option>
-                <option value="Chinar Park">Chinar Park</option>
-                <option value="Dum Dum">Dum Dum</option>
+                <option value="haldiram">Haldiram</option>
+                <option value="Chinar Park">Chinar Park(I)</option>
+                <option value="ganganagar">Ganganagar</option>
+                <option value="cp">Chinar Park(II)</option>
               </Select>
             </div>
             <div className="form-right10">
@@ -546,7 +625,7 @@ const ContactForm = () => {
               <Button
                 className="form-buttonf"
                 colorScheme="red"
-                onClick={onOpenModal1}
+                onClick={onCheck}
               >
                 <div className="form-subm">Check</div>
               </Button>

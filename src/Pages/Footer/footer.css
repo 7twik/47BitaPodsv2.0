@@ -204,3 +204,8 @@ span {
     color: maroon;
     text-decoration: underline;
 }
+@media (max-width: 600px) {
+    .react-responsive-modal-modal {
+        display: flex;
+    }
+}
